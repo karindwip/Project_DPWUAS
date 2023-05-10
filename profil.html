@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+
+    <title>Document</title>
+</head>
+
+<style>
+        
+    .searchform{
+          display: flex;
+        margin: 0;
+    }
+    .search{
+        display: flex;
+        border: 1px solid black;
+        border-width: 0 0 2px;
+        width: 163px;
+    }
+
+    .searchform label, 
+    .searchform input {
+        color: black;
+        float: left;
+        vertical-align: baseline;
+    }
+
+    .searchform label { margin: .125em .125em 0 0; }
+
+    .searchform input[type=search] {
+        font: 1em/1.618 Open Sans, Arial, Sans-serif;
+        background-color: transparent;
+        border: none;
+        padding: .1875em .375em;
+    }
+
+    .searchform input[type=search]:focus {
+        border-color: #F0D90C;
+        color: #F0D90C;
+        outline: 0;
+        width: 163px;
+    }
+    /* -card- */
+    
+    .cards-wrapper {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+    width: 348px;
+    height: 465px;
+  margin-right: 10px;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+
+.card-body{
+    margin-top: 310px;
+    text-align: center;
+}
+
+.carousel-control-next{
+  margin-right: 20px;
+}
+
+.carousel-control-prev{
+  margin-left: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: black;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*  */
+.thumb{
+    width: 276px;
+    height: 387px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+}
+
+        @media only screen and (min-width: 48em) {
+            .searchform input[type=search]{ width: 50%; }
+        }
+
+    
+</style>
+
+<body>
+    <!-- header -->
+    <header class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <form class="searchform" id="searchbar">
+                <img src="img/translation.png" alt="" style="width: 35px; height: 35px; margin-right: 9px;">
+                <div class="search">
+                    
+                    <label for="search-box">
+                        <span class="fa fa-search" style="width: 14px;"></span>
+                    </label>
+                    <input type="search" id="search-box"  placeholder=" search..." />
+                </div>           
+            </form>
+            <a class="navbar-brand" href="#" style="font-size: 16px; display: flex;">
+                <img src="img/Logo UNRI PNG.png" alt="" style="width: 70px; height: 70px;">
+                <ul style=" list-style: none; text-align: center;">
+                    <li style="font-weight: bolder">Program Studi S1</li>
+                    <li style="font-weight: bolder">Teknik Informatika </li>
+                    <li>Universitas Riau</li>
+                </ul>            
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="btnPendaftaran">
+                <button class="custom btn btn-outline-dark custom-class" type="submit" style="background-color: #F0D90C; ">Pendaftaran</button>  
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fw-semibold" style="background-color: #3D3C92; " >
+        <div class="container-fluid" style="align-items: center; width: 796px;">
+            <div class="flex-fill" id="navbarNav" >
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item text-white" style="font-size: 20px;">
+                        <a class="nav-link active" aria-current="page" href="profil.html" style="color: #F0D90C;">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="akademik.html">Akademik</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mahasiswa.html">Mahasiswa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informasi.html">Informasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-lg-11 m-auto">
+        <h1 class="h1 my-5" style="text-align: center; font-size: 60px; font-weight: bolder;">PROFIL</h1>
+        <p style="text-align: center;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam laudantium dolorem repellat a aspernatur, nesciunt explicabo possimus vitae vel blanditiis exercitationem asperiores cum. Illum, sed dolore quas voluptatibus tempore earum amet totam, libero itaque dolor quaerat? Neque, voluptate exercitationem esse nemo tenetur ut cum inventore ea officia eaque nam, adipisci natus expedita provident ipsum aut quia quibusdam sit, fugit ducimus atque dolor non? Fuga fugit possimus autem velit deleniti aliquid, dolorem rem repellendus, esse quia dolore cumque nemo laudantium voluptatibus tempore doloremque dignissimos blanditiis. Harum odit praesentium alias odio consectetur quam debitis culpa accusantium quas at fugit, suscipit, ipsam quasi.</p>
+    </div>
+
+    <!-- slide -->
+</div>
+<div class="bgc" style="padding-bottom: 10px;padding-top: 10px; background-color: #3D3C92; margin-top: 60px;">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+      <div class="card" style="background-image: url(img/visi.jpg); background-size: cover; background-position: center;">
+        <div class="card-body">
+          <h5 class="card-title" style="margin-bottom: 20px; font-size:40px; font-weight: bold; color: black;">Visi</h5>
+          <a href="#" class="custom btn btn-outline-dark custom-class" type="submit" style="background-color: #F0D90C; ">Details</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block" style="background-image: url(img/Misi.jpg); background-size: cover; background-position: center;">
+        <div class="card-body">
+            <h5 class="card-title" style="margin-bottom: 20px; font-size:40px; font-weight: bold; color: black;">Misi</h5>
+            <a href="#" class="custom btn btn-outline-dark custom-class" type="submit" style="background-color: #F0D90C; ">Details</a>
+          </div>
+      </div>
+      <div class="card d-none d-md-block" style="background-image: url(img/Tujuan.jpg); background-size: cover; background-position: center;">
+        <div class="card-body">
+            <h5 class="card-title" style="margin-bottom: 20px; font-size:40px; font-weight: bold; color: black;">Tujuan</h5>
+            <a href="#" class="custom btn btn-outline-dark custom-class" type="submit" style="background-color: #F0D90C; ">Details</a>
+          </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card d-none d-md-block">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+<!-- Dosen -->
+<div class="col-lg-11 m-auto">
+    <h1 class="h1 my-5" style="text-align: center; font-size: 60px; font-weight: bolder;">DOSEN</h1>
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos, at labore commodi officiis voluptatum? Sint, facere? Quaerat natus mollitia pariatur culpa modi, obcaecati numquam quisquam veritatis totam excepturi vero beatae nemo, unde autem nobis ut magni laborum iusto delectus nisi quas repudiandae a! Illum beatae error distinctio aliquid minima inventore nisi ipsa voluptates quae molestias. Earum, neque! Tempore aperiam, doloribus unde laboriosam ipsum amet facere provident quae quibusdam, commodi nihil. Soluta ullam totam iste tenetur cupiditate sequi veniam laboriosam.</p>
+</div>
+<div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-md-4 col-xs-6 center thumb ">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-fc.jpg" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-dm.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-it.jpg" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-nl.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-ra.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-lo2.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-sn.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    
+     <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="padding-bottom: 100px;">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-ty.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="padding-bottom: 100px;">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-rr.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="padding-bottom: 100px;">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-ed.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="padding-bottom: 100px;">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-dr.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb" style="padding-bottom: 100px;">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Dosen/pp-dn.webp" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+</div>
+
+<div class="col-lg-11 m-auto">
+    <h1 class="h1 my-5" style="text-align: center; font-size: 60px; font-weight: bolder;">Tenaga Pendidik</h1>
+    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos, at labore commodi officiis voluptatum? Sint, facere? Quaerat natus mollitia pariatur culpa modi, obcaecati numquam quisquam veritatis totam excepturi vero beatae nemo, unde autem nobis ut magni laborum iusto delectus nisi quas repudiandae a! Illum beatae error distinctio aliquid minima inventore nisi ipsa voluptates quae molestias. Earum, neque! Tempore aperiam, doloribus unde laboriosam ipsum amet facere provident quae quibusdam, commodi nihil. Soluta ullam totam iste tenetur cupiditate sequi veniam laboriosam.</p>
+</div>
+<div class="container" >
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a href="" class="fancybox" rel="ligthbox">
+                <img src="" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+            </a>
+        </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Tenaga Pendidik/pp-jt.jpg" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <a href="" class="fancybox" rel="ligthbox">
+            <img src="img/Tenaga Pendidik/pp-za.jpg" style="object-fit: cover; height: 387px;" class="zoom img-fluid "  alt="">
+        </a>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-11 m-auto">
+        <h1 class="h1 my-5" style="text-align: center; font-size: 60px; font-weight: bolder;">AKREDITASI</h1>
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto, minus rerum debitis unde, veritatis hic reprehenderit nihil vitae incidunt repudiandae porro accusamus vel eius non ab ex molestiae quidem similique. Commodi deleniti nulla facere tempora, repudiandae qui vel unde quasi porro illum praesentium rem vero animi doloremque aspernatur tenetur est doloribus voluptas sit iste sapiente ipsum repellendus? Maiores, eius?</p>
+    </div>
+<div class="akreditasi py-2" style="background-color: #3D3C92;">   
+<div class="container">
+    
+
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="img/sertifikat.jpg" alt="">
+        </div>
+
+        <div class="col-lg-4">
+            <img src="img/sertifikat.jpg" alt="">
+        </div>
+
+        <div class="col-lg-4">
+            <img src="img/sertifikat.jpg" alt="">
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

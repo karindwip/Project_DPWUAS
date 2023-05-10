@@ -1,0 +1,17 @@
+
+@media (max-width: 657px) { 
+    .btnPendaftaran{
+        display: none;
+    } 
+
+    #searchbar{
+        display: none;
+    }
+
+    .card{
+        width: 300px;
+    }
+}
+
+
+
